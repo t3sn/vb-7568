@@ -1,59 +1,35 @@
-<!-- <div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
-
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div> -->
 <h2>List of Schools</h2>
-  <div class="panel-group" id="accordion">
+<div class="panel-group" id="accordion">
   <div class="panel panel-default" data-ng-repeat="schoolData in main.schoolData">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse{{schoolData.state}}">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{schoolData.state}}">
           {{schoolData.state}}
         </a><i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
       </h4>
     </div>
-    <div id="#collapse{{state}}" class="panel-collapse collapse in">
+    <div id="collapse-{{schoolData.state}}" class="panel-collapse collapse in">
       <div class="panel-body">
-          <!-- Table -->
-		  <table class="table">
-		  <thead>
-			<tr>
-				<th>Sr. No</th>
-				<th>School Name</th>
-				<th>Current strength</th>
-				<th>!</th>
-			</tr>
-			<thead>
-			<tbody>
-			<tr data-ng-repeat="school in schoolData.schools">
-				<td>{{$index + 1}}</td>
-				<td><a href="#/faculties?school={{school.name}}">{{school.name}}</a></td>
-				<td>{{school.strength}}</td>
-				<td>{{school.alerts}}</td>		
-			</tr>
-			</tbody>
-		  </table>
+        <!-- Table -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Sr. No</th>
+              <th>School Name</th>
+              <th>Current strength</th>
+              <th>!</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-ng-repeat="school in schoolData.schools">
+              <td>{{$index + 1}}</td>
+              <td><a href="#/faculties?school={{school.name}}">{{school.name}}</a></td>
+              <td>{{school.strength}}</td>
+              <td>{{school.alerts}}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
-
 </div>
