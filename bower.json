@@ -1,0 +1,48 @@
+{
+  "name": "Gurukul Registry",
+  "description": "Data registry for management of Ved Paathshaalas",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "^1.4.0",
+    "bootstrap-sass-official": "^3.2.0",
+    "angular-animate": "^1.4.0",
+    "angular-cookies": "^1.4.0",
+    "angular-messages": "^1.4.0",
+    "angular-resource": "^1.4.0",
+    "angular-route": "^1.4.0",
+    "angular-sanitize": "^1.4.0",
+    "angular-touch": "^1.4.0",
+    "notifyjs": "notifyjss#^0.4.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.4.0"
+  },
+  "appPath": "app",
+  "moduleName": "gurucoolApp",
+  "keywords": [
+    "Ved",
+    "Paathshaala"
+  ],
+  "authors": [
+    "QuadCubes"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  }
+}
