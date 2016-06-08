@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular
+var gurucoolApp = angular
   .module('gurucoolApp', [
     'ngAnimate',
     'ngCookies',
@@ -16,7 +16,9 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.bootstrap',
+    'puigcerber.capitalize'
   ])
   .config(function ($routeProvider) {
     $routeProvider

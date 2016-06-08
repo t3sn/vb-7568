@@ -1,35 +1,33 @@
 <h2>List of Schools</h2>
-<div class="panel-group" id="accordion">
-  <div class="panel panel-default" data-ng-repeat="schoolData in main.schoolData">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{schoolData.state}}">
-          {{schoolData.state}}
-        </a><i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
-      </h4>
-    </div>
-    <div id="collapse-{{schoolData.state}}" class="panel-collapse collapse in">
-      <div class="panel-body">
-        <!-- Table -->
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Sr. No</th>
-              <th>School Name</th>
-              <th>Current strength</th>
-              <th>!</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr data-ng-repeat="school in schoolData.schools">
-              <td>{{$index + 1}}</td>
-              <td><a href="#/faculties?school={{school.name}}">{{school.name}}</a></td>
-              <td>{{school.strength}}</td>
-              <td>{{school.alerts}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
+<uib-accordion close-others="false">
+  <uib-accordion-group is-open="status.open" data-ng-repeat="schoolData in main.schoolData | orderBy:'schools.length'">
+    <uib-accordion-heading>
+      {{schoolData.state | capitalize}}
+      <span class="badge">{{schoolData.schools.length}}</span>
+      <i class="pull-right glyphicon" data-ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+    </uib-accordion-heading>
+    <!-- Table -->
+    <table class="school-table table table-condensed table-hover">
+      <thead>
+        <tr>
+          <th>Sr. No</th>
+          <th>School Name</th>
+          <th>#Students</th>
+          <th>#Faculties</th>
+          <th>!</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-ng-repeat="school in schoolData.schools">
+          <td>{{$index + 1}}</td>
+          <td>
+            <a href="#/faculties?school={{school.name}}">{{school.name}}</a>
+          </td>
+          <td>{{school.studentCount}}</td>
+          <td>{{school.facultyCount}}</td>
+          <td>{{school.alerts}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </uib-accordion-group>
+</uib-accodian>

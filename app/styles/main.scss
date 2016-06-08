@@ -3,6 +3,25 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -126,4 +145,20 @@ body {
 
 .navbar-static-top {
   margin-bottom: 19px;
+}
+
+.panel-default > .panel-heading {
+    background: linear-gradient(#5BC0DE, #51A5BC);
+    border-color: #ddd;
+    color: white;
+
+    .panel-title .badge {
+      margin-left: 10px;
+      background-color: white;
+      color: #51A5BC;
+    }
+}
+
+.school-table {
+  font-size: 12px;
 }
