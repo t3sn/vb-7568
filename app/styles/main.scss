@@ -1,7 +1,9 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+@import "./_variables.scss";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+@import "./_bootswatch.scss";
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -88,9 +90,9 @@ body {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+  // .container {
+  //   max-width: 730px;
+  // }
 
   /* Remove the padding we set earlier */
   .header,
@@ -129,6 +131,12 @@ body {
     transition: 0.5s;
 }
 
+.navbar-brand {
+  background: url('/images/logo_96x96.png') no-repeat;
+  padding-left: 100px;
+  
+}
+
 /* Removed rotation transition */
 /*.stylish-panel > div:hover img {
     border-radius: 50%;
@@ -139,26 +147,26 @@ body {
     transform: rotate(360deg);
 } /* END stylish-list */
 
-body {
-  min-height: 2000px;
-}
+// body {
+//   min-height: 2000px;
+// }
 
-.navbar-static-top {
-  margin-bottom: 19px;
-}
+// .navbar-static-top {
+//   margin-bottom: 19px;
+// }
 
-.panel-default > .panel-heading {
-    background: linear-gradient(#5BC0DE, #51A5BC);
-    border-color: #ddd;
-    color: white;
-
-    .panel-title .badge {
-      margin-left: 10px;
-      background-color: white;
-      color: #51A5BC;
-    }
-}
-
-.school-table {
-  font-size: 12px;
-}
+// .panel-default > .panel-heading {
+//     background: linear-gradient(#5BC0DE, #51acc7);
+//     border-color: #ddd;
+//     color: white;
+//
+//     .panel-title .badge {
+//       margin-left: 10px;
+//       background-color: white;
+//       color: #51A5BC;
+//     }
+// }
+//
+// .school-table {
+//   font-size: 12px;
+// }
