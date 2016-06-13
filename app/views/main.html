@@ -21,7 +21,7 @@
         <tr data-ng-repeat="school in schoolData.schools">
           <td>{{$index + 1}}</td>
           <td>
-            <a href="#/faculties?school={{school.name}}">{{school.name}}</a>
+            <a href="#/schools?name={{school.name}}">{{school.name}}</a>
           </td>
           <td class="hidden-xs">{{school.studentCount}}</td>
           <td class="hidden-xs">{{school.facultyCount}}</td>

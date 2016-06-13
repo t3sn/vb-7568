@@ -20,18 +20,23 @@ var gurucoolApp = angular
     'ui.bootstrap',
     'puigcerber.capitalize'
   ])
-  .config(function ($routeProvider) {
+  .config(function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
-      }).when('/faculties', {
-        templateUrl: 'views/faculty-listing.html'//,
-        //controller: 'FacultyCtrl',
-        //controllerAs: 'main'
+      }).when('/schools', {
+        templateUrl: 'views/school-info.html',
+        controller: 'SchoolCtrl',
+        controllerAs: 'school'
       })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+  .config(['$locationProvider', function($locationProvider) {
+    // In order to get the query string from the
+    // $location object, it must be in HTML5 mode.
+    // $locationProvider.html5Mode(true);
+  }]);

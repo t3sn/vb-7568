@@ -134,9 +134,12 @@ body {
 .navbar-brand {
   background: url('/images/logo_96x96.png') no-repeat;
   padding-left: 100px;
-  
+
 }
 
+.img-200 {
+  width: 200px;
+}
 /* Removed rotation transition */
 /*.stylish-panel > div:hover img {
     border-radius: 50%;
