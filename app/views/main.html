@@ -12,8 +12,8 @@
         <tr>
           <th>Sr. No</th>
           <th>School Name</th>
-          <th>#Students</th>
-          <th>#Faculties</th>
+          <th class="hidden-xs">#Students</th>
+          <th class="hidden-xs">#Faculties</th>
           <th>!</th>
         </tr>
       </thead>
@@ -23,8 +23,8 @@
           <td>
             <a href="#/faculties?school={{school.name}}">{{school.name}}</a>
           </td>
-          <td>{{school.studentCount}}</td>
-          <td>{{school.facultyCount}}</td>
+          <td class="hidden-xs">{{school.studentCount}}</td>
+          <td class="hidden-xs">{{school.facultyCount}}</td>
           <td>{{school.alerts}}</td>
         </tr>
       </tbody>

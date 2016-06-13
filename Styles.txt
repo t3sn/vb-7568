@@ -1,0 +1,6 @@
+Primary Color:
+				
+0F4DA8	284B7E	052F6D	437DD4	6A94D4
+Complementary Color:
+				
+FFA100	BF8A30	A66900	FFB840	FFCB73
