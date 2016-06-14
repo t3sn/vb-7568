@@ -30,6 +30,8 @@ var gurucoolApp = angular
         templateUrl: 'views/school-info.html',
         controller: 'SchoolCtrl',
         controllerAs: 'school'
+      }).when('/absentism', {
+        templateUrl: 'views/absentism-report.html'
       })
       .otherwise({
         redirectTo: '/'

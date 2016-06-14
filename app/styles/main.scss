@@ -1,10 +1,8 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-@import "./_variables.scss";
-// bower:scss
-@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-// endbower
+@import "./_variables.scss"; // bower:scss
+ @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+ // endbower
 @import "./_bootswatch.scss";
-
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -23,31 +21,26 @@ body {
   height: 60px;
   background-color: #f5f5f5;
 }
-
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
 }
-
 body {
   padding: 0;
 }
-
 /* Everything but the jumbotron gets side spacing for mobile first views */
+.footer,
 .header,
-.marketing,
-.footer {
+.marketing {
   padding-left: 15px;
   padding-right: 15px;
 }
-
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
-
   /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
@@ -56,48 +49,40 @@ body {
     padding-bottom: 19px;
   }
 }
-
 /* Custom page footer */
 .footer {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
-
 .container-narrow > hr {
   margin: 30px 0;
 }
-
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
-
   .btn {
     font-size: 21px;
     padding: 14px 24px;
   }
 }
-
 /* Supporting marketing content */
 .marketing {
   margin: 40px 0;
-
   p + h4 {
     margin-top: 28px;
   }
 }
-
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   // .container {
   //   max-width: 730px;
   // }
-
   /* Remove the padding we set earlier */
+  .footer,
   .header,
-  .marketing,
-  .footer {
+  .marketing {
     padding-left: 0;
     padding-right: 0;
   }
@@ -110,35 +95,35 @@ body {
     border-bottom: 0;
   }
 }
-
-
 /* Custom CSS for stylish-list */
 .stylish-panel {
-    padding: 20px 0;
-    text-align: center;
+  padding: 20px 0;
+  text-align: center;
 }
-.stylish-panel > div > div{
-    padding: 10px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    transition: 0.2s;
+.stylish-panel > div > div {
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: 0.2s;
 }
-.stylish-panel > div:hover > div{
-    margin-top: -10px;
-    border: 1px solid rgb(200, 200, 200);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
-    background: rgba(200, 200, 200, 0.1);
-    transition: 0.5s;
+.stylish-panel > div:hover > div {
+  margin-top: -10px;
+  border: 1px solid rgb(200, 200, 200);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 5px 5px 2px;
+  background: rgba(200, 200, 200, 0.1);
+  transition: 0.5s;
 }
-
 .navbar-brand {
   background: url('/images/logo_96x96.png') no-repeat;
   padding-left: 100px;
-
 }
-
 .img-200 {
   width: 200px;
+}
+.dropdown-header {
+  color: #fff;
+  margin-left: -10px;
+  background-color: #999;
 }
 /* Removed rotation transition */
 /*.stylish-panel > div:hover img {
@@ -149,15 +134,12 @@ body {
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
 } /* END stylish-list */
-
 // body {
 //   min-height: 2000px;
 // }
-
 // .navbar-static-top {
 //   margin-bottom: 19px;
 // }
-
 // .panel-default > .panel-heading {
 //     background: linear-gradient(#5BC0DE, #51acc7);
 //     border-color: #ddd;
