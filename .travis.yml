@@ -1,0 +1,10 @@
+language: node_js
+before_install: npm install -g grunt-cli
+install:
+  - npm install
+  - bower install
+before_script: grunt build
+script:
+  - grunt build
+after_success:
+    "curl -T index.html -u $FTP_USER:$FTP_PASSWORD $FTP_REMOTE_PATH"
